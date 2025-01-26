@@ -13,8 +13,8 @@ const buttonVariants = cva(
         default: "bg-primary-500  rounded-[300px] text-heading-secondary shadow hover:bg-primary-600", 
         destructive: "bg-danger text-white shadow-sm hover:bg-danger/90", 
         outline:
-          "border border-gray-custom-300 bg-white shadow-sm    hover:bg-gray-custom-100 hover:text-gray-custom-800", 
-        secondary: "bg-gray-custom-200 text-gray-custom-800 shadow-sm hover:bg-gray-custom-300", // Custom secondary color
+          "border border-gray-custom-300 bg-white shadow-sm  rounded-[300px]   hover:bg-gray-custom-100 hover:text-gray-custom-800",
+        secondary: " bg-primary-50 shadow-sm rounded-[300px]  hover:bg-gray-custom-300", // Custom secondary color
         ghost: "hover:bg-gray-custom-100 hover:text-gray-custom-800", // Custom ghost variant
         link: "text-primary-500 underline-offset-4 hover:underline", // Custom link variant
       },

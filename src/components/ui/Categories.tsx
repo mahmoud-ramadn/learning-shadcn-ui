@@ -2,7 +2,7 @@ import { Button } from "./button"
 
 
 function Categories() {
-  return (<section className=" md:space-y-8 space-y-5 mb-8">
+  return (<section className="lg:w-full md:container mx-auto md:space-y-8 space-y-5 mb-8">
     <h1 className="  font-semibold   md:text-[39px]  text-xl text-heading-main ">Categories</h1>
     {/* gird cards */}
     <div className=" grid md:grid-cols-2  grid-cols-1  md:gap-8 gap-5 ">

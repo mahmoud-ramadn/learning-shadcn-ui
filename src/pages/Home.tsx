@@ -1,5 +1,7 @@
 import Categories from "@/components/ui/Categories"
+import DesignInspiration from "@/components/ui/DesignInspiration"
 import HeroSection from "@/components/ui/HeroSection"
+import Question from "@/components/ui/Question"
 import TopProducts from "@/components/ui/TopProducts"
 function Home() {
   return (
@@ -7,7 +9,9 @@ function Home() {
 <HeroSection/>   
 <Categories/> 
 <TopProducts/>
-    </section>
+<DesignInspiration/>
+<Question/>
+</section>
   )
 }
 

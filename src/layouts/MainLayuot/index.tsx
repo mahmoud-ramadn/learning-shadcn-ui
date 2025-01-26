@@ -5,8 +5,8 @@ function MainLayout() {
   return (
     <div>
     <TheHeader/>
-<Outlet/>
-<TheFooter/>
+      <Outlet/>
+   <TheFooter/>
     </div>
   )
 }

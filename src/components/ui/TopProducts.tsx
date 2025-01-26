@@ -1,7 +1,7 @@
+import { Slider } from "@radix-ui/react-slider"
 import { Button } from "./button"
 import { Select  ,SelectContent,SelectGroup,SelectTrigger,SelectValue ,SelectItem,SelectLabel } from "./select"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
- import { Slider } from "./slider"
 function TopProducts() {
     const productData=[{
         image:'/mock product/Image (1).png',
@@ -116,12 +116,12 @@ function TopProducts() {
 
 
     ]
-  return (<section className=" mb-14">
+  return (<section className="  container mx-auto mb-14">
 <div className=" w-full  md:flex justify-between items-center  space-y-6  ">
           <h1 className=" text-heading-main md:text-4xl text-xl font-semibold">Top Products</h1>
          <div>
           <Select>
-              <SelectTrigger className="w-[218px]  rounded-[300px] h-[64px]   px-4">
+              <SelectTrigger className="w-[218px]  md:rounded-[300px]  rounded-3xl h-[64px]   px-4">
                   <SelectValue placeholder="Select a fruit" />
               </SelectTrigger>
                   <SelectContent position="popper"  className=" bg-primary-200" >
@@ -138,11 +138,9 @@ function TopProducts() {
          </div>
 </div>
       <div className=" grid lg:grid-cols-4 md:grid-cols-2  gap-8 grid-cols-2 mt-8  mb-[62px] ">
-
         {
             productData.map((itme,index)=>(
           <div key={index} className=" lg:col-span-1   col-span-1  md:h-[383px]  h-[235px]  ">
-
             <div className=" w-full md:h-[313px] h-[173px]   rounded-md overflow-hidden">
             <img className=" w-full h-full  object-cover" src={itme.image} alt="" />
             </div>
@@ -152,18 +150,13 @@ function TopProducts() {
                  text-heading-main  text-lg font-semibold
                 flex items-center justify-center  w-[71px] h-[38px]">{itme.price}</span>
             </div>
-                    <RadioGroup className=" flex items-center" defaultValue="comfortable">
-                
+
+                <RadioGroup className=" flex items-center" defaultValue="comfortable">
                             <RadioGroupItem className="   bg-primary-200 " value="default" id="r1" />
-                          
                         <RadioGroupItem className=" bg-[#834F65] " value="comfortable" id="r2" />
-                      
-                    </RadioGroup>
-                    
+                </RadioGroup>
 
-          </div>
-
-
+            </div>
             ))
 
         }
