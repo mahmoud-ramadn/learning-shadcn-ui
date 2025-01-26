@@ -57,7 +57,7 @@ function TheHeader () {
             </VisuallyHidden>
            
            {
-              toggle ? (<Login  handlerToggle={hande} />) : (<div className="w-[720px] text-center">
+              toggle ? (<Login   />) : (<div className="w-[720px] text-center">
                 <h2 className="  text-lg font-bold  text-heading-main">Create an account</h2>
                 <div className="  my-8 flex justify-center">
 
