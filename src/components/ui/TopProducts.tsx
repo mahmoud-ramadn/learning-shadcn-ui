@@ -116,7 +116,7 @@ function TopProducts() {
 
 
     ]
-  return (<section className="  container mx-auto mb-14">
+  return (<div className="  container mx-auto mb-14">
 <div className=" w-full  md:flex justify-between items-center  space-y-6  ">
           <h1 className=" text-heading-main md:text-4xl text-xl font-semibold">Top Products</h1>
          <div>
@@ -170,7 +170,7 @@ function TopProducts() {
           <Slider className=" w-[300px]  mx-auto" defaultValue={[33]} max={100} step={1} />
           <Button variant={"outline"} className="  w-[192px] h-[56px] rounded-[300px]">Show more</Button>
       </div>
-  </section>
+  </div>
   )
 }
 

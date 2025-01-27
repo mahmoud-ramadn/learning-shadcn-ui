@@ -3,7 +3,7 @@ import TheHeader from '@/components/Common/TheHeader';
 import TheFooter from '@/components/Common/TheFooter';
 function MainLayout() {
   return (
-    <div>
+    <div className=' flex flex-col justify-between min-h-screen'>
     <TheHeader/>
       <Outlet/>
    <TheFooter/>

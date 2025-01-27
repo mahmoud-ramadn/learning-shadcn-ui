@@ -1,5 +1,6 @@
 import { Slider } from "@radix-ui/react-slider";
 import { Button } from "./button";
+
 function DesignInspiration() {
   return (
     <section className=" container mx-auto  my-14">
@@ -119,10 +120,7 @@ function DesignInspiration() {
           <Slider className=" w-[300px]  mx-auto" defaultValue={[33]} max={100} step={1} />
           <Button variant={"outline"} className="  w-[192px] h-[56px] rounded-[300px]">Show more</Button>
         </div>
-      
       </div>
-
-
     </section>
   );
 }
