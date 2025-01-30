@@ -26,7 +26,7 @@ function Login({ handleToggle, handlOpenForegePage }: LoginProps) {
                 />
                 <div className="w-[330px] mx-auto text-end">
                     <p
-                        onClick={()=>handlOpenForegePage}
+                        onClick={handlOpenForegePage}
                         className="text-base cursor-pointer font-bold text-primary-500"
                     >
                         Forget Password
@@ -48,7 +48,7 @@ function Login({ handleToggle, handlOpenForegePage }: LoginProps) {
                 <p className="font-semibold cursor-pointer text-body-sub">
                     First time here?{" "}
                     <button
-                        onClick={()=>handleToggle}
+                        onClick={handleToggle}
                         className="text-primary-500 cursor-pointer"
                     >
                         Create an account

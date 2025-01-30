@@ -4,7 +4,7 @@ import { Sheet, SheetTrigger, SheetContent } from "../ui/sheet";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { DialogTitle } from "@radix-ui/react-dialog";
 import Login from "../ui/Auth/Login";
-import { useState, MouseEvent } from "react";
+import { useState } from "react";
 import SignUp from "../ui/Auth/SignUp";
 import ForgetPassword from "../ui/Auth/ForgetPassword";
 import CheckOut from "../ui/Cart/CheckOut";
@@ -21,9 +21,7 @@ function TheHeader() {
 
   const handleOpenForgetPage = () => setOpenForgetPage(!openForgetPage);
 
-  const handleToggle = (e: MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    e.stopPropagation();
+  const handleToggle = () => {
     setToggle(!toggle);
     setOpenForgetPage(false);
     setIsSheetOpen(true);
@@ -93,7 +91,7 @@ function TheHeader() {
                 {currentStep === 0 && <Cartlist hanldeSetps={handleNext} />}
                 {currentStep === 1 && <CheckOut hanldeSetps={handleNext} />}
                 {currentStep === 2 && <Payment handleSteps={handleNext} />}
-                {currentStep === 3 && <OrderConfirm  />}
+                {currentStep === 3 && <OrderConfirm />}
               </div>
             </div>
           </SheetContent>

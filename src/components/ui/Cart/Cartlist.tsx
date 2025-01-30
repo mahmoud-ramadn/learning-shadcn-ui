@@ -10,7 +10,7 @@ interface PaymentProps {
 
 function Cartlist({hanldeSetps}:PaymentProps) {
 
-const carList=[];
+const carList=[0];
 
     
   return (
