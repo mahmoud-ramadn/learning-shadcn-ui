@@ -26,9 +26,9 @@ function Shope() {
                   </BreadcrumbList>
               </Breadcrumb>
              </div>
-            <div className=" relative ">
-                <Search className=" absolute right-7 top-1/2 -translate-y-1/2"/>
-              <Input  type="search" className=" md:w-[642px] h-[64px] rounded-3xl border-[1px] border-gray-custom-400 p-6   outline-2 focus:outline-primary-500  outline-offset-2   focus:outline-double" placeholder="Search by name or category..."/>
+            <div className="relative   ">
+                <Search className=" absolute right-7  top-1/2 -translate-y-1/2"/>
+              <Input  type="search" className=" md:w-[642px]  h-[64px]   rounded-3xl border-[1px] border-gray-custom-400 p-6   outline-2 focus:outline-primary-500  outline-offset-2   focus:outline-double" placeholder="Search by name or category..."/>
             </div>
 
           <div className=" flex md:justify-between   justify-center  gap-3 flex-wrap items-center my-8">

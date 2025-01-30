@@ -1,36 +1,62 @@
-import { Input } from "../input"
-import { Button } from "../button"
-import { Link } from "react-router-dom"
-function Login() {
-    return (<div className="w-[720px] text-center">
-        <h2 className="  text-lg font-bold  text-heading-main">Login </h2>
-        <div className="  my-8 flex justify-center">
+import { Input } from "../input";
+import { Button } from "../button";
 
-            <img src="/Squircle.png" alt="" />
-        </div>
-        <form className=" flex flex-col items-center gap-3">
-            <h3 className=" text-center  text-xl font-semibold ">Welcome back</h3>
-            <Input className="h-[65px] w-[353px] rounded-[300px] border-[1px] border-gray-custom-400 pl-5  focus:border-primary-200 outline-offset-2 focus:outline-double  focus:outline-primary-500 " placeholder='Email' />
-            <Input className="h-[65px] w-[353px] rounded-[300px]  border-[1px] border-gray-custom-400 pl-5 focus:border-primary-200  outline-offset-2 focus:outline-double  focus:outline-primary-500 " placeholder='Password' />
-
-            <Link to={'/'}>Forget Password</Link>
-
-            <Button className=" w-[353px] h-[56px]" variant={"default"} >Login</Button>
-            <div className=" text-body-sub" >____________________________  or __________________________</div>
-            <Button className=" w-[353px] h-[56px]" variant={"outline"} ><img src="/google_logo.jpg" alt="" /> Continue with Google</Button>
-            <Button className=" w-[353px] h-[56px]" variant={"outline"} ><img src="/Group.jpg" alt="" /> Continue with Apple</Button>
-            <p className=" font-semibold   cursor-pointer text-body-sub">First time here?  <button className=" text-primary-500  cursor-pointer"  >Create an account </button></p>
-        </form>
-
-
-
-
-
-
-
-
-    </div>
-  )
+interface LoginProps {
+    handleToggle: () => void; // Function to toggle between Login and SignUp
+    handlOpenForegePage: () => void; // Function to open the Forget Password page
 }
 
-export default Login
+function Login({ handleToggle, handlOpenForegePage }: LoginProps) {
+    return (
+        <div className="w-[720px] text-center">
+            <h2 className="text-lg font-bold text-heading-main">Login</h2>
+            <div className="my-8 flex justify-center">
+                <img src="/Squircle.png" alt="Decorative Squircle" />
+            </div>
+            <form className="flex flex-col items-center gap-3">
+                <h3 className="text-center text-xl font-semibold">Welcome back</h3>
+                <Input
+                    className="h-[65px] w-[353px] rounded-[300px] border-[1px] border-gray-custom-400 pl-5 focus:border-primary-200 outline-offset-2 focus:outline-double focus:outline-primary-500"
+                    placeholder="Email"
+                />
+                <Input
+                    className="h-[65px] w-[353px] rounded-[300px] border-[1px] border-gray-custom-400 pl-5 focus:border-primary-200 outline-offset-2 focus:outline-double focus:outline-primary-500"
+                    placeholder="Password"
+                    type="password" // Added type="password" for better UX
+                />
+                <div className="w-[330px] mx-auto text-end">
+                    <p
+                        onClick={()=>handlOpenForegePage}
+                        className="text-base cursor-pointer font-bold text-primary-500"
+                    >
+                        Forget Password
+                    </p>
+                </div>
+
+                <Button className="w-[353px] h-[56px]" variant={"default"}>
+                    Login
+                </Button>
+                <div className="text-body-sub">
+                    ____________________________ or __________________________
+                </div>
+                <Button className="w-[353px] h-[56px]" variant={"outline"}>
+                    <img src="/google_logo.jpg" alt="Google Logo" /> Continue with Google
+                </Button>
+                <Button className="w-[353px] h-[56px]" variant={"outline"}>
+                    <img src="/Group.jpg" alt="Apple Logo" /> Continue with Apple
+                </Button>
+                <p className="font-semibold cursor-pointer text-body-sub">
+                    First time here?{" "}
+                    <button
+                        onClick={()=>handleToggle}
+                        className="text-primary-500 cursor-pointer"
+                    >
+                        Create an account
+                    </button>
+                </p>
+            </form>
+        </div>
+    );
+}
+
+export default Login;

@@ -182,7 +182,7 @@ const CarouselItem = React.forwardRef<
       role="group"
       aria-roledescription="slide"
       className={cn(
-        "flex-[0_0_25%]", // Each item takes 25% of the container width
+        "flex-[0_0_50%] sm:flex-[0_0_50%] md:flex-[0_0_33.333%] lg:flex-[0_0_25%]", // Responsive width
         orientation === "horizontal" ? "pl-4" : "pt-4",
         className
       )}
@@ -190,6 +190,9 @@ const CarouselItem = React.forwardRef<
     />
   );
 });
+
+
+
 CarouselItem.displayName = "CarouselItem";
 
 const CarouselPrevious = React.forwardRef<

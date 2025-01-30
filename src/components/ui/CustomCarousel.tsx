@@ -72,7 +72,7 @@ function CustomCarousel() {
                 </div>
                 <CarouselContent className=" ">
                     {productData.map((item, index) => (
-                        <CarouselItem key={index} className="lg:w-1/4 md:1/2 w-full ">
+                        <CarouselItem key={index} className="  w-full ">
                             <div>
                                 <div className="md:h-[313px] h-[173px] rounded-md overflow-hidden">
                                     <img className="w-full h-full object-cover" src={item.image} alt="" />

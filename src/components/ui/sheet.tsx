@@ -66,13 +66,16 @@ const SheetContent = React.forwardRef<
       >
       {children}
       <SheetPrimitive.Close 
+          
       className="absolute left-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 
        focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary">
         
-         <div className=" w-7 h-7 bg-primary-400 text-black rounded-full">
-          <span className=" font-bold text-base ">x</span>
+         <div className=" w-7 h-7  flex items-center  justify-center bg-primary-400 text-black rounded-full">
+        
+            <img src="cancel.png" alt="" />
 
          </div>
+
         <span className="sr-only">Close</span>
       </SheetPrimitive.Close>
     </SheetPrimitive.Content>
